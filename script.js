@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const d = id => form.querySelector('#' + id).value;
       const msg = `Hi DRIVERA! I'd like to book a slot.%0A%0A*Name:* ${d('name')}%0A*Car:* ${d('car')}%0A*Service:* ${d('service')}%0A*Date:* ${d('date')}%0A*Phone:* ${d('phone')}`;
-      window.open(`https://wa.me/918977306032?text=${msg}`, '_blank');
+      window.open(`https://wa.me/918182923456?text=${msg}`, '_blank');
     });
   }
 });
