@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — DRIVERA | Premium Car Detailing Vizag</title>
+  <meta name="description" content="Explore DRIVERA's complete range of premium auto detailing services in Vizag — Nano Ceramic Coating, PPF, Interior Deep Cleaning, Polishing, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .svc-page-hero{padding:140px 48px 80px;text-align:center;background:var(--bg-card);border-bottom:1px solid var(--border)}
+    .svc-page-hero h1{font-family:var(--font-h);font-size:clamp(1.6rem,4vw,2.6rem);font-weight:700;letter-spacing:.1em;margin-bottom:12px}
+    .svc-page-hero p{font-size:.95rem;color:var(--text-dim);max-width:600px;margin:0 auto}
+    .svc-page{padding:60px 48px 100px;max-width:1000px;margin:0 auto}
+    .svc-accordion{display:flex;flex-direction:column;gap:16px}
+    .svc-acc-item{border:1px solid var(--border);border-radius:14px;background:var(--bg-card);overflow:hidden;transition:var(--tr)}
+    .svc-acc-item:hover,.svc-acc-item.open{border-color:rgba(232,0,0,.3)}
+    .svc-acc-head{display:flex;align-items:center;justify-content:space-between;padding:24px 28px;cursor:pointer;transition:var(--tr)}
+    .svc-acc-head:hover{background:rgba(255,255,255,.02)}
+    .svc-acc-left{display:flex;align-items:center;gap:18px}
+    .svc-acc-num{font-family:var(--font-h);font-size:.7rem;letter-spacing:.2em;color:var(--accent);min-width:32px}
+    .svc-acc-title{font-family:var(--font-h);font-size:.82rem;font-weight:700;letter-spacing:.1em}
+    .svc-acc-arrow{font-size:1.2rem;color:var(--text-dim);transition:var(--tr)}
+    .svc-acc-item.open .svc-acc-arrow{transform:rotate(180deg);color:var(--accent)}
+    .svc-acc-body{max-height:0;overflow:hidden;transition:max-height .5s ease}
+    .svc-acc-item.open .svc-acc-body{max-height:1200px}
+    .svc-acc-inner{padding:0 28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .svc-acc-img{border-radius:12px;overflow:hidden;min-height:240px;background:var(--bg-glass);border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+    .svc-acc-img img{width:100%;height:100%;object-fit:cover}
+    .svc-acc-desc h4{font-family:var(--font-h);font-size:.72rem;letter-spacing:.15em;color:var(--accent);margin-bottom:12px}
+    .svc-acc-desc p{font-size:.88rem;color:var(--text-dim);line-height:1.75;margin-bottom:18px}
+    .svc-acc-features{display:flex;flex-direction:column;gap:8px}
+    .svc-acc-features li{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--text-dim)}
+    .svc-acc-features li::before{content:'✓';color:var(--accent);font-weight:700}
+    .svc-acc-cta{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:12px 28px;border-radius:8px;background:var(--accent);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:var(--tr);box-shadow:0 0 20px var(--accent-glow)}
+    .svc-acc-cta:hover{box-shadow:0 0 40px var(--accent-glow);transform:translateY(-2px)}
+    @media(max-width:768px){
+      .svc-page-hero{padding:120px 20px 60px}
+      .svc-page{padding:40px 20px 80px}
+      .svc-acc-inner{grid-template-columns:1fr}
+      .svc-acc-head{padding:20px 20px}
+      .svc-acc-inner{padding:0 20px 24px}
+      .svc-acc-img{min-height:200px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav scrolled" id="navbar">
+  <a href="index.html" class="nav-logo">DRIV<span>ERA</span></a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <a href="services.html" class="nav-drop-trigger" style="color:#fff">Services <span class="drop-arrow">▾</span></a>
+      <div class="nav-drop-menu">
+        <a href="#ceramic-coating">Nano Ceramic Coating</a>
+        <a href="#ppf">Paint Protection Film</a>
+        <a href="#interior">Interior Deep Cleaning</a>
+        <a href="#general-service">General Service & Wash</a>
+        <a href="#exterior-polishing">Exterior Polishing</a>
+        <a href="#engine-detailing">Engine Bay Detailing</a>
+        <a href="#headlight">Headlight Restoration</a>
+        <a href="#anti-rust">Anti-Rust Coating</a>
+      </div>
+    </div>
+    <a href="index.html#gallery">Gallery</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#contact">Location</a>
+  </div>
+  <a href="index.html#contact" class="nav-cta">Book Slot</a>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav">
+  <a href="index.html">Home</a>
+  <a href="index.html#gallery">Gallery</a>
+  <a href="index.html#reviews">Reviews</a>
+  <a href="index.html#contact">Location</a>
+  <a href="index.html#contact" class="nav-cta" style="margin-top:16px">Book Slot</a>
+</div>
+
+<!-- HERO -->
+<div class="svc-page-hero">
+  <p class="sec-label">Our Expertise</p>
+  <h1>ALL <span class="outline">PREMIUM</span> SERVICES</h1>
+  <p>Every service at DRIVERA is performed with obsessive attention to detail using only world-class products and techniques.</p>
+</div>
+
+<!-- SERVICES ACCORDION -->
+<div class="svc-page">
+  <div class="svc-accordion">
+
+    <div class="svc-acc-item" id="ceramic-coating">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">01</span><span class="svc-acc-title">NANO CERAMIC COATING</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>ULTIMATE PAINT PROTECTION</h4>
+          <p>Our multi-layer Nano Ceramic Coating creates an ultra-hard, transparent shield over your vehicle's paint that delivers extreme hydrophobicity, UV protection, and a mirror-like gloss that lasts for years. Using 9H+ hardness-grade liquid polymer technology, the coating chemically bonds to the factory paint, creating a permanent layer of protection that repels water, dirt, bird droppings, and chemical contaminants.</p>
+          <ul class="svc-acc-features">
+            <li>9H+ Diamond Hardness Protection</li>
+            <li>Extreme Hydrophobic Self-Cleaning Effect</li>
+            <li>UV & Oxidation Resistance</li>
+            <li>Chemical & Scratch Resistance</li>
+            <li>3-5 Year Durability</li>
+            <li>Factory Paint Enhancement</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="ppf">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">02</span><span class="svc-acc-title">PAINT PROTECTION FILM (PPF)</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>THE INVISIBLE ARMOR</h4>
+          <p>Our self-healing thermoplastic urethane (TPU) Paint Protection Film is the ultimate invisible shield against stone chips, road debris, scratches, and environmental damage. The film absorbs impacts and self-heals minor scratches with heat exposure, keeping your paint pristine for years. Applied by trained technicians using precision-cut templates for a seamless, invisible fit.</p>
+          <ul class="svc-acc-features">
+            <li>Self-Healing Technology</li>
+            <li>Optically Clear — Invisible Finish</li>
+            <li>Stone Chip & Scratch Protection</li>
+            <li>Anti-Yellowing & UV Stable</li>
+            <li>8-10 Year Warranty</li>
+            <li>Full Body or Partial Coverage Options</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="interior">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">03</span><span class="svc-acc-title">INTERIOR DEEP CLEANING</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>SURGICAL CABIN RESTORATION</h4>
+          <p>Our Interior Deep Cleaning spa treatment rejuvenates every surface of your vehicle's cabin. Using professional-grade steam sanitization, specialized leather conditioners, and anti-bacterial treatments, we restore your seats, dashboard, carpets, vents, and headliner to factory-fresh condition while eliminating odors and allergens.</p>
+          <ul class="svc-acc-features">
+            <li>High-Pressure Steam Sanitization</li>
+            <li>Leather Conditioning & Protection</li>
+            <li>Carpet & Upholstery Shampooing</li>
+            <li>Dashboard & Console Restoration</li>
+            <li>AC Vent Deep Cleaning</li>
+            <li>Odor Elimination Treatment</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="general-service">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">04</span><span class="svc-acc-title">GENERAL SERVICE & WASH</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>PREMIUM CAR CARE</h4>
+          <p>More than just a wash — our General Service includes pH-neutral foam wash, paint decontamination with clay bar treatment, tire and wheel detailing, glass cleaning, and engine bay rinse. Every step uses premium products to ensure your vehicle looks showroom-ready without risking paint damage.</p>
+          <ul class="svc-acc-features">
+            <li>pH-Neutral Snow Foam Wash</li>
+            <li>Clay Bar Paint Decontamination</li>
+            <li>Tire & Alloy Wheel Detailing</li>
+            <li>Glass & Mirror Polishing</li>
+            <li>Engine Bay Rinse</li>
+            <li>Door Jamb & Trim Cleaning</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="exterior-polishing">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">05</span><span class="svc-acc-title">EXTERIOR POLISHING & PAINT CORRECTION</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>MIRROR-FINISH RESTORATION</h4>
+          <p>Our multi-stage paint correction and polishing process removes swirl marks, fine scratches, water spots, and oxidation to restore your paint to a flawless, mirror-like finish. Using dual-action polishers and graduated compound systems, we bring out the deepest gloss and clarity your paint can offer.</p>
+          <ul class="svc-acc-features">
+            <li>Multi-Stage Paint Correction</li>
+            <li>Swirl Mark Removal</li>
+            <li>Scratch & Water Spot Elimination</li>
+            <li>High-Gloss Mirror Finish</li>
+            <li>Paint Depth Measurement</li>
+            <li>Sealant & Wax Protection Layer</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="engine-detailing">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">06</span><span class="svc-acc-title">ENGINE BAY DETAILING</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>UNDER-THE-HOOD PERFECTION</h4>
+          <p>A clean engine bay isn't just about aesthetics — it helps with heat dissipation, makes leak detection easier, and preserves rubber and plastic components. Our engine detailing includes safe degreasing, pressure rinse, plastic/rubber dressing, and protective coating application.</p>
+          <ul class="svc-acc-features">
+            <li>Safe Chemical Degreasing</li>
+            <li>Controlled Pressure Rinse</li>
+            <li>Plastic & Rubber Dressing</li>
+            <li>Hose & Wiring Protection</li>
+            <li>Engine Cover Polishing</li>
+            <li>Protective Coating Application</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="headlight">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">07</span><span class="svc-acc-title">HEADLIGHT RESTORATION</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>CRYSTAL CLEAR VISIBILITY</h4>
+          <p>Cloudy, yellowed headlights reduce visibility by up to 80% and age your car's appearance instantly. Our headlight restoration process removes oxidation, UV damage, and haze through wet-sanding and polishing, followed by a UV-resistant clear coat that keeps them crystal clear for years.</p>
+          <ul class="svc-acc-features">
+            <li>Oxidation & Haze Removal</li>
+            <li>Multi-Stage Wet Sanding</li>
+            <li>Machine Polishing to Clarity</li>
+            <li>UV-Resistant Clear Coat Seal</li>
+            <li>Improved Night Visibility</li>
+            <li>Both Headlights Included</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="svc-acc-item" id="anti-rust">
+      <div class="svc-acc-head" onclick="this.parentElement.classList.toggle('open')">
+        <div class="svc-acc-left"><span class="svc-acc-num">08</span><span class="svc-acc-title">ANTI-RUST UNDERBODY COATING</span></div>
+        <span class="svc-acc-arrow">▾</span>
+      </div>
+      <div class="svc-acc-body"><div class="svc-acc-inner">
+        <div class="svc-acc-img">Image Coming Soon</div>
+        <div class="svc-acc-desc">
+          <h4>CORROSION DEFENSE SHIELD</h4>
+          <p>Vizag's coastal humidity accelerates underbody rust and corrosion. Our anti-rust underbody coating creates a thick, rubberized protective barrier on the chassis, wheel wells, and exposed metal surfaces that blocks moisture, salt spray, and road chemicals from reaching the metal.</p>
+          <ul class="svc-acc-features">
+            <li>Full Underbody Degreasing</li>
+            <li>Rubberized Anti-Rust Coating</li>
+            <li>Wheel Well Protection</li>
+            <li>Chassis & Exhaust Shielding</li>
+            <li>Moisture & Salt Resistance</li>
+            <li>2-3 Year Protection Life</li>
+          </ul>
+          <a href="index.html#contact" class="svc-acc-cta">Book This Service</a>
+        </div>
+      </div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FLOATING -->
+<div class="floating">
+  <a href="https://www.instagram.com/driveravizag/" target="_blank" rel="noopener" class="fl-btn ig" aria-label="Instagram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </a>
+  <a href="https://wa.me/918182923456?text=Hi%20DRIVERA!%20I'd%20like%20to%20book%20a%20slot." target="_blank" rel="noopener" class="fl-btn wa" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <span class="nav-logo">DRIV<span>ERA</span></span>
+      <p>Vizag's premier auto detailing studio. Ceramic coatings, PPF, and complete car care.</p>
+    </div>
+    <div class="ft-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="index.html#contact">Book a Slot</a>
+    </div>
+    <div class="ft-social">
+      <h4>Follow Us</h4>
+      <div class="ft-icons">
+        <a href="https://www.instagram.com/driveravizag/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://wa.me/918182923456" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <p style="font-size:.78rem;color:var(--text-dim);margin-top:14px">@driveravizag</p>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <p>&copy; 2026 DRIVERA. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', true), { passive: true });
+
+  // Hamburger
+  const ham = document.querySelector('.hamburger');
+  const mob = document.querySelector('.mob-nav');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('active');
+    mob.classList.toggle('open');
+    document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
+  });
+  mob.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+    ham.classList.remove('active'); mob.classList.remove('open'); document.body.style.overflow = '';
+  }));
+
+  // Auto-open service from hash
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el && el.classList.contains('svc-acc-item')) {
+      el.classList.add('open');
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+    }
+  }
+</script>
+</body>
+</html>

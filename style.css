@@ -47,10 +47,10 @@ body::before{
 .pre-text{
   font-family:var(--font-h);font-size:clamp(2.5rem,7vw,5rem);
   font-weight:700;letter-spacing:.4em;
-  color:var(--accent);
-  text-shadow:0 0 40px var(--accent-glow),0 0 80px var(--accent-glow);
   animation:prePulse 1s ease-in-out infinite alternate;
 }
+.pre-white{color:#fff;text-shadow:0 0 30px rgba(255,255,255,.3),0 0 60px rgba(255,255,255,.15)}
+.pre-red{color:var(--accent);text-shadow:0 0 40px var(--accent-glow),0 0 80px var(--accent-glow)}
 .pre-bar{width:140px;height:3px;margin:28px auto 0;background:rgba(255,255,255,.08);border-radius:4px;overflow:hidden}
 .pre-bar::after{content:'';display:block;width:40%;height:100%;background:var(--accent);border-radius:4px;animation:preSlide 1s ease-in-out infinite}
 @keyframes prePulse{to{text-shadow:0 0 60px var(--accent-glow),0 0 120px var(--accent-glow)}}
@@ -96,6 +96,30 @@ body::before{
 }
 .nav-cta:hover{box-shadow:0 0 44px var(--accent-glow);transform:translateY(-2px)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+
+/* Navbar Dropdown */
+.nav-dropdown{position:relative}
+.nav-drop-trigger{display:flex;align-items:center;gap:4px}
+.drop-arrow{font-size:.65rem;transition:var(--tr)}
+.nav-dropdown:hover .drop-arrow{transform:rotate(180deg)}
+.nav-drop-menu{
+  position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);
+  min-width:240px;padding:12px 0;
+  background:rgba(10,10,10,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--border);border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,.7);
+  opacity:0;visibility:hidden;transform:translateX(-50%) translateY(8px);
+  transition:var(--tr);z-index:100;
+}
+.nav-dropdown:hover .nav-drop-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-drop-menu a{
+  display:block;padding:10px 24px;font-size:.76rem;font-weight:500;
+  letter-spacing:.08em;color:var(--text-dim);transition:var(--tr);white-space:nowrap;
+}
+.nav-drop-menu a::after{display:none}
+.nav-drop-menu a:hover{color:#fff;background:rgba(232,0,0,.1);padding-left:28px}
+.drop-divider{height:1px;background:var(--border);margin:8px 16px}
+.drop-all{color:var(--accent) !important;font-weight:600 !important}
 .hamburger span{display:block;width:26px;height:2px;background:#fff;border-radius:2px;transition:var(--tr)}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .hamburger.active span:nth-child(2){opacity:0}
