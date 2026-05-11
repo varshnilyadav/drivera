@@ -69,4 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(`https://wa.me/918182923456?text=${msg}`, '_blank');
     });
   }
+
+  /* Gallery Lightbox */
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  if (lightbox) {
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  }
 });
